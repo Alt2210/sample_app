@@ -56,3 +56,34 @@ ja:
       help: "ヘルプ"
       about: "概要"
       contact: "お問い合わせ"
+  activerecord:
+    models:
+      user: "ユーザー"
+    attributes:
+      user:
+        name: "名前"
+        email: "メールアドレス"
+        password: "パスワード"
+        password_confirmation: "パスワードの確認"
+    button:
+      submit: "アカウントを作成する"
+    flash:
+      actions:
+        create: "アカウントを作成しました"
+        update: "アカウント情報を更新しました"
+        destroy: "アカウントを削除しました"
+      warnings:
+        not_found_user: "ユーザーが見つかりません！"
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              too_long: "が長すぎます (最大 %{count} 文字)"
+      messages:
+        blank: "を入力してください"
+        taken: "は既に使用されています"
+        invalid: "が無効です"
+  shared:
+    error_messages:
+      header: "フォームに%{count}つのエラーがあります。"
