@@ -41,6 +41,11 @@ ja:
       home: "ホーム"
       help: "ヘルプ"
       log_in: "ログイン"
+      account: "アカウント"
+      users: "ユーザー"
+      profile: "プロフィール"
+      setting: "設定"
+      log_out: "ログアウト"
     footer:
       the: ""
       tutorial_link: "Ruby on Rails Tutorial"
@@ -50,6 +55,10 @@ ja:
       contact: "お問い合わせ"
       news: "ニュース"
   helpers:
+    label:
+      session:
+        email: "メールアドレス"
+        password: "パスワード"
     application:
       base_title: "Ruby on Rails Tutorial サンプルアプリケーション"
       home: "ホーム"
@@ -87,3 +96,12 @@ ja:
   shared:
     error_messages:
       header: "フォームに%{count}つのエラーがあります。"
+  sessions:
+    new:
+      title: "ログイン"
+      description: "こちらは、すでにアカウントをお持ちのユーザー向けのログインページです。"
+      sign_up_now: "今すぐ登録！"
+      new_user: "新規ユーザーですか？"
+    flash:
+      dangers:
+        invalid_email_password_combination: "パスワードまたはメールアドレスが間違っています！"

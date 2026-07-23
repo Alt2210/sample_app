@@ -41,6 +41,11 @@ en:
       home: "Home"
       help: "Help"
       log_in: "Log in"
+      account: "Account"
+      users: "User"
+      profile: "Profile"
+      setting: "Settings"
+      log_out: "Log out"
     footer:
       the: ""
       tutorial_link: "Ruby on Rails Tutorial"
@@ -50,6 +55,10 @@ en:
       contact: "Contact"
       news: "News"
   helpers:
+    label:
+      session:
+        email: "Email Address"
+        password: "Password"
     application:
       base_title: "Sample App"
       home: "Home"
@@ -89,3 +98,12 @@ en:
       header:
         one: "The form contains 1 error."
         other: "The form contains %{count} errors."
+  sessions:
+    new:
+      title: "Log in"
+      description: "This is the login page for users who already have an account."
+      sign_up_now: "Sign up now!"
+      new_user: "New user?"
+    flash:
+      dangers:
+        invalid_email_password_combination: "Password or email is incorrect!"

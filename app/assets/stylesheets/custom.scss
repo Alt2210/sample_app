@@ -109,3 +109,8 @@ input {
     color: $state-danger-text;
   }
 }
+
+.dropdown-menu-right {
+  left: auto;
+  right: 0;
+}

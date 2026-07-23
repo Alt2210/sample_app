@@ -6,6 +6,8 @@ export default class extends Controller {
   connect() {
     this.close = this.close.bind(this)
     document.addEventListener("click", this.close)
+    document.addEventListener("click", this.close)
+    window.addEventListener("dropdown:opened", this.handleOtherOpened)
   }
 
   disconnect() {
@@ -15,14 +17,32 @@ export default class extends Controller {
   toggle(event) {
     event.preventDefault()
     event.stopPropagation()
-    this.element.classList.toggle("open")
-    this.toggleTarget.setAttribute("aria-expanded", this.element.classList.contains("open"))
+    const isOpening = !this.element.classList.contains("open")
+
+    if (isOpening) {
+      window.dispatchEvent(new CustomEvent("dropdown:opened", { detail: { openElement: this.element } }))
+    }
+
+    this.element.classList.toggle("open", isOpening)
+    this.toggleTarget.setAttribute("aria-expanded", isOpening)
+  }
+
+  handleOtherOpened(event) {
+    if (event.detail.openElement !== this.element) {
+      this.forceClose()
+    }
   }
 
   close(event) {
     if (event && event.type === "click" && this.element.contains(event.target)) return
 
+    this.forceClose()
+  }
+
+  forceClose() {
     this.element.classList.remove("open")
-    this.toggleTarget.setAttribute("aria-expanded", "false")
+    if (this.hasToggleTarget) {
+      this.toggleTarget.setAttribute("aria-expanded", "false")
+    }
   }
 }
