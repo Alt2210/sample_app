@@ -1,33 +1,58 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   "true": "foo"
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  static_pages:
+    header:
+      logo: "Sample App"
+    home:
+      title: "Home"
+      welcome: "Welcome to the Sample App"
+      description: "This is the home page of"
+      tutorial_link: "Ruby on Rails Tutorial"
+      sample_app: "Sample App"
+      signup: "Sign up now!"
+    help:
+      title: "Help"
+      heading: "Help"
+      description: "Get help with the Ruby on Rails Tutorial at"
+      help_page_link: "Rails Tutorial help page"
+      description2: "For help with this sample app, see"
+      book_link: "the Ruby on Rails Tutorial book"
+      book_word: "."
+    about:
+      title: "About"
+      heading: "About"
+      description: "This is a sample application for the"
+      with: "with"
+      this_is: "This is the sample application for the tutorial."
+    contact:
+      title: "Contact"
+      heading: "Contact"
+      description: "Contact the Ruby on Rails Tutorial about this sample application at"
+      contact_page_link: "contact page"
+  users:
+    new:
+      title: "Sign up"
+      heading: "Sign up"
+      description: "This will be the sign-up page for new users."
+  layouts:
+    application:
+      base_title: "Sample App"
+    header:
+      logo: "Sample App"
+      home: "Home"
+      help: "Help"
+      log_in: "Log in"
+    footer:
+      the: ""
+      tutorial_link: "Ruby on Rails Tutorial"
+      by: "by"
+      author_link: "Michael Hartl"
+      about: "About"
+      contact: "Contact"
+      news: "News"
+  helpers:
+    application:
+      base_title: "Sample App"
+      home: "Home"
+      help: "Help"
+      about: "About"
+      contact: "Contact"
