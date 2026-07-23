@@ -102,6 +102,7 @@ vi:
       description: "Đây là trang đăng nhập cho người dùng đã có tài khoản"
       sign_up_now: "Đăng ký ngay!"
       new_user: "Người dùng mới?"
+      remember: "Ghi nhớ tôi trên máy tính này"
     flash:
       dangers:
         invalid_email_password_combination: "Mật khẩu hoặc Email bị sai!"
