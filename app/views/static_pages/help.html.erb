@@ -1,0 +1,11 @@
+<%= provide :title, t(".title") %>
+<h1><%= t(".title") %></h1>
+<p><%= t(".description") %>
+  <%= link_to Settings.links.tutorial_link, target: "_blank" do%>
+    <%= t(".help_page_link") %>
+  <%end%>
+  <%= t(".description2") %>
+  <%= link_to Settings.links.tutorial_book_link, target: "_blank" do%>
+    <em><%= t(".book_link") %></em><%= t(".book_word") %>
+  <%end%>
+</p>

@@ -11,6 +11,10 @@ module RailsTutorial
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
+    config.i18n.default_locale = Settings.default_locale
+    config.i18n.available_locales = Settings.available_locales.map(&:to_sym)
+    config.i18n.fallbacks = [I18n.default_locale]
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
