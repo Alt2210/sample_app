@@ -56,3 +56,36 @@ en:
       help: "Help"
       about: "About"
       contact: "Contact"
+  activerecord:
+    models:
+      user: "User"
+    attributes:
+      user:
+        name: "Name"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+    button:
+      submit: "Create my account"
+    flash:
+      actions:
+        create: "Welcome to the Sample App!"
+        update: "Your profile has been updated."
+        destroy: "Your account has been deleted."
+      warnings:
+        not_found_user: "User not found!"
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              too_long: "is too long (maximum is %{count} characters)"
+      messages:
+        blank: "can't be blank"
+        taken: "has already been taken"
+        invalid: "is invalid"
+  shared:
+    error_messages:
+      header:
+        one: "The form contains 1 error."
+        other: "The form contains %{count} errors."
