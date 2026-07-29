@@ -15,6 +15,8 @@ module RailsTutorial
     config.i18n.available_locales = Settings.available_locales.map(&:to_sym)
     config.i18n.fallbacks = [I18n.default_locale]
 
+    config.active_storage.variant_processor = :mini_magick
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
