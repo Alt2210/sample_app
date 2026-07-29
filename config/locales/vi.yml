@@ -41,6 +41,11 @@ vi:
       home: "Trang chủ"
       help: "Trợ giúp"
       log_in: "Đăng nhập"
+      account: "Tài khoản"
+      users: "Người dùng"
+      profile: "Hồ sơ"
+      setting: "Cài đặt"
+      log_out: "Đăng xuất"
     footer:
       the: ""
       tutorial_link: "Ruby on Rails Tutorial"
@@ -50,6 +55,10 @@ vi:
       contact: "Liên hệ"
       news: "Tin tức"
   helpers:
+    label:
+      session:
+        email: "Địa chỉ Email"
+        password: "Mật khẩu"
     application:
       base_title: "Ứng dụng mẫu Ruby on Rails Tutorial"
       home: "Trang chủ"
@@ -87,3 +96,12 @@ vi:
   shared:
     error_messages:
       header: "Biểu mẫu chứa %{count} lỗi."
+  sessions:
+    new:
+      title: "Đăng nhập"
+      description: "Đây là trang đăng nhập cho người dùng đã có tài khoản"
+      sign_up_now: "Đăng ký ngay!"
+      new_user: "Người dùng mới?"
+    flash:
+      dangers:
+        invalid_email_password_combination: "Mật khẩu hoặc Email bị sai!"
