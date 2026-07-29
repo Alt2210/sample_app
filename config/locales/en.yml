@@ -103,12 +103,17 @@ en:
       models:
         user:
           attributes:
+            name:
+              too_long: "is too long (maximum is %{count} characters)"
             email:
               too_long: "is too long (maximum is %{count} characters)"
+            password:
+              too_short: "is too short (minimum is %{count} characters)"
       messages:
         blank: "can't be blank"
         taken: "has already been taken"
         invalid: "is invalid"
+        confirmation: "doesn't match %{attribute}"
   shared:
     error_messages:
       header:
@@ -121,16 +126,38 @@ en:
       sign_up_now: "Sign up now!"
       new_user: "New user?"
       remember: "Remember me on this computer"
+      forget_password: "(forgot password)"
     flash:
       dangers:
         invalid_email_password_combination: "Password or email is incorrect!"
       warnings:
         account_not_activate: "Account not activated. Check your email for the activation link!"
+  password_resets:
+    create:
+      noti: "Email sent with password reset instructions"
+      not_found: "Email address not found"
+    update:
+      error: "must exist"
+      success: "Reset password success"
+    edit:
+      title: "Reset password"
+      submit: "Update password"
+    new:
+      title: "Forgot password"
+      submit: "Send instructions"
+    in_activated: "User is in actived!"
+    expired: "Password reset has expired."
   user_mailer:
-    subject:
-      account_activate: "Account activation"
     account_activation:
+      subject: "Account activation"
       title: "Sample App"
       greeting: "Hi %{name},"
       content: "Welcome to the Sample App! Click on the link below to activate your account:"
       link: "Activate"
+    password_reset:
+      subject: "Password reset"
+      title: "Password reset"
+      content: "To reset your password click the link below:"
+      link: "Reset password"
+      expiration: "This link will expire in two hours."
+      note: "If you did not request your password to be reset, please ignore this email and your password will stay as it is."
