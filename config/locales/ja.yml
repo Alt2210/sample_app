@@ -102,6 +102,7 @@ ja:
       description: "こちらは、すでにアカウントをお持ちのユーザー向けのログインページです。"
       sign_up_now: "今すぐ登録！"
       new_user: "新規ユーザーですか？"
+      remember: "ログイン状態を保持する"
     flash:
       dangers:
         invalid_email_password_combination: "パスワードまたはメールアドレスが間違っています！"

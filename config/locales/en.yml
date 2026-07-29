@@ -104,6 +104,7 @@ en:
       description: "This is the login page for users who already have an account."
       sign_up_now: "Sign up now!"
       new_user: "New user?"
+      remember: "Remember me on this computer"
     flash:
       dangers:
         invalid_email_password_combination: "Password or email is incorrect!"
