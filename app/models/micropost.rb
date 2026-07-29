@@ -1,6 +1,9 @@
 class Micropost < ApplicationRecord
   belongs_to :user
+
   scope :newest, ->{order(created_at: :desc)}
+  scope :relate_post, ->(user_ids){where(user_id: user_ids)}
+
   has_one_attached :image do |attachable|
     attachable.variant :display, resize_to_limit: Settings.image.resize_limit
   end
