@@ -18,3 +18,5 @@ gravatar:
   size_for_show: 80
 pagination:
   user_per_page: 10
+mail:
+  default_mail: "noreply@example.com"
