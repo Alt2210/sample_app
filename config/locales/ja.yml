@@ -33,6 +33,13 @@ ja:
       title: "登録"
       heading: "登録"
       description: "こちらは新規ユーザー登録ページです。"
+    index:
+      title: "すべてのユーザー"
+      turbo_confirm: "本当によろしいですか？"
+    edit:
+      title: "更新"
+      heading: "プロフィールの更新"
+      change: "変更"
   layouts:
     application:
       base_title: "Ruby on Rails Tutorial サンプルアプリケーション"
@@ -76,6 +83,7 @@ ja:
         password_confirmation: "パスワードの確認"
     button:
       submit: "アカウントを作成する"
+      update: "情報を更新する"
     flash:
       actions:
         create: "アカウントを作成しました"
@@ -83,6 +91,10 @@ ja:
         destroy: "アカウントを削除しました"
       warnings:
         not_found_user: "ユーザーが見つかりません！"
+      danger:
+        delete_fail: "削除に失敗しました！"
+        login_required: "ログインしてください！"
+        edit_permission_required: "このアカウントは編集できません！"
     errors:
       models:
         user:
@@ -95,7 +107,9 @@ ja:
         invalid: "が無効です"
   shared:
     error_messages:
-      header: "フォームに%{count}つのエラーがあります。"
+      header:
+        one: "フォームに1つのエラーがあります。"
+        other: "フォームに%{count}つのエラーがあります。"
   sessions:
     new:
       title: "ログイン"

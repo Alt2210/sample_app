@@ -33,6 +33,13 @@ en:
       title: "Sign up"
       heading: "Sign up"
       description: "This will be the sign-up page for new users."
+    index:
+      title: "All users"
+      turbo_confirm: "Are you sure?"
+    edit:
+      title: "Update"
+      heading: "Update my profile"
+      change: "Change"
   layouts:
     application:
       base_title: "Sample App"
@@ -76,6 +83,7 @@ en:
         password_confirmation: "Password confirmation"
     button:
       submit: "Create my account"
+      update: "Update my infomation"
     flash:
       actions:
         create: "Welcome to the Sample App!"
@@ -83,6 +91,10 @@ en:
         destroy: "Your account has been deleted."
       warnings:
         not_found_user: "User not found!"
+      danger:
+        delete_fail: "Delete fail!"
+        login_required: "Please Login!"
+        edit_permission_required: "You cannot edit this account!"
     errors:
       models:
         user:

@@ -6,8 +6,15 @@ links:
   tutorial_link: "http://www.railstutorial.org/"
   tutorial_book_link: "http://www.railstutorial.org/book"
   gravatar_link: "https://secure.gravatar.com/avatar/"
+  gravatar_email: "http://gravatar.com/emails"
+  gravatar_url: "https://secure.gravatar.com/avatar/%{gravatar_id}?s=%{size}"
 user:
   email_regex: '\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z'
   name_max_length: 50
   email_max_length: 255
   password_min_length: 6
+gravatar:
+  size_for_index: 50
+  size_for_show: 80
+pagination:
+  user_per_page: 10

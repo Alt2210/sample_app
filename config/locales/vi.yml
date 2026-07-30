@@ -33,6 +33,13 @@ vi:
       title: "Đăng ký"
       heading: "Đăng ký"
       description: "Đây sẽ là trang đăng ký cho người dùng mới."
+    index:
+      title: "Tất cả người dùng"
+      turbo_confirm: "Bạn có chắc chắn không?"
+    edit:
+      title: "Cập nhật"
+      heading: "Cập nhật hồ sơ của tôi"
+      change: "Thay đổi"
   layouts:
     application:
       base_title: "Ứng dụng mẫu Ruby on Rails Tutorial"
@@ -76,6 +83,7 @@ vi:
         password_confirmation: "Xác nhận mật khẩu"
     button:
       submit: "Tạo tài khoản"
+      update: "Cập nhật thông tin của tôi"
     flash:
       actions:
         create: "Chào mừng đến với Sample App!"
@@ -83,6 +91,10 @@ vi:
         destroy: "Tài khoản đã bị xóa"
       warnings:
         not_found_user: "Không tìm thấy người dùng!"
+      danger:
+        delete_fail: "Xóa không thành công!"
+        login_required: "Hãy đăng nhập!"
+        edit_permission_required: "Bạn không thể chỉnh sửa thông tin tài khoản này!"
     errors:
       models:
         user:
