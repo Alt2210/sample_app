@@ -89,12 +89,16 @@ ja:
         create: "アカウントを作成しました"
         update: "アカウント情報を更新しました"
         destroy: "アカウントを削除しました"
+        activate: "アカウントが有効化されました！"
       warnings:
         not_found_user: "ユーザーが見つかりません！"
       danger:
         delete_fail: "削除に失敗しました！"
         login_required: "ログインしてください！"
         edit_permission_required: "このアカウントは編集できません！"
+        activate_fail: "無効な有効化リンクです！"
+      info:
+        activate: "アカウントを有効化するためにメールをご確認ください！"
     errors:
       models:
         user:
@@ -120,3 +124,13 @@ ja:
     flash:
       dangers:
         invalid_email_password_combination: "パスワードまたはメールアドレスが間違っています！"
+      warnings:
+        account_not_activate: "アカウントが有効化されていません。有効化リンクについてはメールをご確認ください！"
+  user_mailer:
+    subject:
+      account_activate: "アカウントの有効化"
+    account_activation:
+      title: "サンプルアプリ"
+      greeting: "こんにちは %{name}さん、"
+      content: "Sample Appへようこそ！アカウントを有効化するには以下のリンクをクリックしてください："
+      link: "有効化する"

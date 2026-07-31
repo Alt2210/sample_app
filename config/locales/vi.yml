@@ -89,12 +89,16 @@ vi:
         create: "Chào mừng đến với Sample App!"
         update: "Hồ sơ đã được cập nhật"
         destroy: "Tài khoản đã bị xóa"
+        activate: "Tài khoản đã được kích hoạt!"
       warnings:
         not_found_user: "Không tìm thấy người dùng!"
       danger:
         delete_fail: "Xóa không thành công!"
         login_required: "Hãy đăng nhập!"
         edit_permission_required: "Bạn không thể chỉnh sửa thông tin tài khoản này!"
+        activate_fail: "Đường liên kết để kích hoạt không đúng!"
+      info:
+        activate: "Hãy kiểm tra hòm thư để kích hoạt tài khoản của bạn!"
     errors:
       models:
         user:
@@ -118,3 +122,13 @@ vi:
     flash:
       dangers:
         invalid_email_password_combination: "Mật khẩu hoặc Email bị sai!"
+      warnings:
+        account_not_activate: "Tài khoản chưa được kích hoạt. Hãy kiểm tra hòm thư để kích hoạt tài khoản!"
+  user_mailer:
+    subject:
+      account_activate: "Kích hoạt tài khoản"
+    account_activation:
+      title: "Ứng dụng mẫu"
+      greeting: "Xin chào %{name},"
+      content: "Chào mừng đến với Ứng dụng mẫu! Hãy nhấn vào link sau để kích hoạt tài khoản:"
+      link: "Kích hoạt"

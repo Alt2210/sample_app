@@ -89,12 +89,16 @@ en:
         create: "Welcome to the Sample App!"
         update: "Your profile has been updated."
         destroy: "Your account has been deleted."
+        activate: "Account activated!"
       warnings:
         not_found_user: "User not found!"
       danger:
         delete_fail: "Delete fail!"
         login_required: "Please Login!"
         edit_permission_required: "You cannot edit this account!"
+        activate_fail: "Invalid activation link!"
+      info:
+        activate: "Please check your email to activate your account!"
     errors:
       models:
         user:
@@ -120,3 +124,13 @@ en:
     flash:
       dangers:
         invalid_email_password_combination: "Password or email is incorrect!"
+      warnings:
+        account_not_activate: "Account not activated. Check your email for the activation link!"
+  user_mailer:
+    subject:
+      account_activate: "Account activation"
+    account_activation:
+      title: "Sample App"
+      greeting: "Hi %{name},"
+      content: "Welcome to the Sample App! Click on the link below to activate your account:"
+      link: "Activate"
