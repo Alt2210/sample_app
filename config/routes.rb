@@ -3,7 +3,6 @@ Rails.application.routes.draw do
     get '/login', to: 'sessions#new'
     post '/login', to: 'sessions#create'
     delete '/logout', to: 'sessions#destroy'
-    resources :products
     get "/help", to: "static_pages#help"
     get "/home", to: "static_pages#home"
     root "static_pages#home"
@@ -11,6 +10,7 @@ Rails.application.routes.draw do
     post "/signup", to: "users#create"
     get "/users", to: "users#index"
     resources :users
+    resources :password_resets, only: %i(new create edit update)
     resources :account_activations, only: :edit
   end
 end

@@ -103,12 +103,17 @@ ja:
       models:
         user:
           attributes:
+            name:
+              too_long: "が長すぎます (最大 %{count} 文字)"
             email:
               too_long: "が長すぎます (最大 %{count} 文字)"
+            password:
+              too_short: "が短すぎます (最小 %{count} 文字)"
       messages:
         blank: "を入力してください"
         taken: "は既に使用されています"
         invalid: "が無効です"
+        confirmation: "が%{attribute}と一致しません"
   shared:
     error_messages:
       header:
@@ -121,16 +126,38 @@ ja:
       sign_up_now: "今すぐ登録！"
       new_user: "新規ユーザーですか？"
       remember: "ログイン状態を保持する"
+      forget_password: "(パスワードをお忘れですか？)"
     flash:
       dangers:
         invalid_email_password_combination: "パスワードまたはメールアドレスが間違っています！"
       warnings:
         account_not_activate: "アカウントが有効化されていません。有効化リンクについてはメールをご確認ください！"
+  password_resets:
+    create:
+      noti: "パスワード再設定手順を記載したメールを送信しました"
+      not_found: "メールアドレスが見つかりません"
+    update:
+      error: "が存在している必要があります"
+      success: "パスワードの再設定に成功しました"
+    edit:
+      title: "パスワードの再設定"
+      submit: "パスワードを更新する"
+    new:
+      title: "パスワードをお忘れですか？"
+      submit: "送信する"
+    in_activated: "ユーザーが有効化されていません！"
+    expired: "パスワード再設定の有効期限が切れています。"
   user_mailer:
-    subject:
-      account_activate: "アカウントの有効化"
     account_activation:
+      subject: "アカウントの有効化"
       title: "サンプルアプリ"
       greeting: "こんにちは %{name}さん、"
       content: "Sample Appへようこそ！アカウントを有効化するには以下のリンクをクリックしてください："
       link: "有効化する"
+    password_reset:
+      subject: "パスワードの再設定"
+      title: "パスワードの再設定"
+      content: "パスワードを再設定するには、以下のリンクをクリックしてください："
+      link: "パスワードを再設定する"
+      expiration: "このリンクの有効期限は2時間です。"
+      note: "パスワードの再設定をリクエストしていない場合は、このメールを無視してください。パスワードはそのまま保持されます。"

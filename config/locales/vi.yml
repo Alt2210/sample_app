@@ -103,12 +103,17 @@ vi:
       models:
         user:
           attributes:
+            name:
+              too_long: "quá dài (tối đa %{count} ký tự)"
             email:
               too_long: "quá dài (tối đa %{count} ký tự)"
+            password:
+              too_short: "quá ngắn (tối thiểu %{count} ký tự)"
       messages:
         blank: "không được để trống"
         taken: "đã được sử dụng"
         invalid: "không hợp lệ"
+        confirmation: "không khớp với %{attribute}"
   shared:
     error_messages:
       header: "Biểu mẫu chứa %{count} lỗi."
@@ -119,16 +124,38 @@ vi:
       sign_up_now: "Đăng ký ngay!"
       new_user: "Người dùng mới?"
       remember: "Ghi nhớ tôi trên máy tính này"
+      forget_password: "(Quên mật khẩu)"
     flash:
       dangers:
         invalid_email_password_combination: "Mật khẩu hoặc Email bị sai!"
       warnings:
         account_not_activate: "Tài khoản chưa được kích hoạt. Hãy kiểm tra hòm thư để kích hoạt tài khoản!"
+  password_resets:
+    create:
+      noti: "Đã gửi email cùng hướng dẫn"
+      not_found: "Không tìm thấy địa chỉ email"
+    update:
+      error: "không được để trống"
+      success: "Đổi mật khẩu thành công"
+    edit:
+      title: "Đổi mật khẩu"
+      submit: "Đổi mật khẩu"
+    new:
+      title: "Quên mật khẩu"
+      submit: "Gửi hướng dẫn"
+    in_activated: "User is in actived!"
+    expired: "Password reset has expired."
   user_mailer:
-    subject:
-      account_activate: "Kích hoạt tài khoản"
     account_activation:
+      subject: "Kích hoạt tài khoản"
       title: "Ứng dụng mẫu"
       greeting: "Xin chào %{name},"
       content: "Chào mừng đến với Ứng dụng mẫu! Hãy nhấn vào link sau để kích hoạt tài khoản:"
       link: "Kích hoạt"
+    password_reset:
+      subject: "Đặt lại mật khẩu"
+      title: "Đặt lại mật khẩu"
+      content: "Để đặt lại mật khẩu, vui lòng nhấp vào liên kết dưới đây:"
+      link: "Đặt lại mật khẩu"
+      expiration: "Liên kết này sẽ hết hạn trong 2 giờ."
+      note: "Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua email này và mật khẩu của bạn sẽ được giữ nguyên."

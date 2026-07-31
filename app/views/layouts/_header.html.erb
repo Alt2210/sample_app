@@ -1,6 +1,6 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to t("layouts.header.logo"), "#", id: "logo" %>
+    <%= link_to t("layouts.header.logo"), root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to t(".home"), root_path %></li>
@@ -34,7 +34,7 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-right" data-dropdown-target="menu">
             <% Settings.available_locales.each do |locale| %>
-              <li><%= link_to locale.upcase, url_for(locale: locale) %></li>
+              <li><%= link_to locale.upcase, language_switch_params(locale:) %></li>
             <% end %>
           </ul>
         </li>
