@@ -10,4 +10,12 @@ module UsersHelper
   def can_destroy_user? user
     current_user.admin? && !current_user?(user)
   end
+
+  def check_micropost
+    @user.microposts.any?
+  end
+
+  def count_microposts
+    @user.microposts.count
+  end
 end

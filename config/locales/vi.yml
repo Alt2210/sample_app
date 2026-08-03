@@ -9,6 +9,7 @@ vi:
       tutorial_link: "Ruby on Rails Tutorial"
       sample_app: "ứng dụng mẫu."
       signup: "Đăng ký ngay!"
+      feed: "Bảng tin"
     help:
       title: "Trợ giúp"
       heading: "Trợ giúp"
@@ -40,6 +41,8 @@ vi:
       title: "Cập nhật"
       heading: "Cập nhật hồ sơ của tôi"
       change: "Thay đổi"
+    show:
+      micropost: "Bài đăng (%{count})"
   layouts:
     application:
       base_title: "Ứng dụng mẫu Ruby on Rails Tutorial"
@@ -75,12 +78,16 @@ vi:
   activerecord:
     models:
       user: "Người dùng"
+      micropost: "Bài đăng"
     attributes:
       user:
         name: "Tên"
         email: "Email"
         password: "Mật khẩu"
         password_confirmation: "Xác nhận mật khẩu"
+      micropost:
+        content: "Nội dung"
+        image: "Hình ảnh"
     button:
       submit: "Tạo tài khoản"
       update: "Cập nhật thông tin của tôi"
@@ -109,6 +116,13 @@ vi:
               too_long: "quá dài (tối đa %{count} ký tự)"
             password:
               too_short: "quá ngắn (tối thiểu %{count} ký tự)"
+        micropost:
+          attributes:
+            content:
+              too_long: "quá dài (tối đa %{count} ký tự)"
+            image:
+              invalid_image_format: "phải là định dạng hình ảnh hợp lệ"
+              image_too_large: "phải nhỏ hơn 5MB"
       messages:
         blank: "không được để trống"
         taken: "đã được sử dụng"
@@ -116,7 +130,16 @@ vi:
         confirmation: "không khớp với %{attribute}"
   shared:
     error_messages:
-      header: "Biểu mẫu chứa %{count} lỗi."
+      header:
+        one: "Biểu mẫu chứa 1 lỗi."
+        other: "Biểu mẫu chứa %{count} lỗi."
+    micropost_form:
+      placeholder: "Soạn bài đăng mới..."
+      submit: "Đăng"
+      image_size_alert: "Kích thước tệp tối đa là 5MB. Vui lòng chọn tệp nhỏ hơn."
+    user_info:
+      view: "Xem hồ sơ của tôi"
+      micropost_count: "%{count} bài đăng"
   sessions:
     new:
       title: "Đăng nhập"
@@ -143,8 +166,8 @@ vi:
     new:
       title: "Quên mật khẩu"
       submit: "Gửi hướng dẫn"
-    in_activated: "User is in actived!"
-    expired: "Password reset has expired."
+    in_activated: "Người dùng chưa được kích hoạt!"
+    expired: "Liên kết đặt lại mật khẩu đã hết hạn."
   user_mailer:
     account_activation:
       subject: "Kích hoạt tài khoản"
@@ -159,3 +182,12 @@ vi:
       link: "Đặt lại mật khẩu"
       expiration: "Liên kết này sẽ hết hạn trong 2 giờ."
       note: "Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua email này và mật khẩu của bạn sẽ được giữ nguyên."
+  microposts:
+    create_success: "Đã tạo bài đăng!"
+    delete_success: "Đã xóa bài đăng"
+    delete_fail: "Xóa thất bại"
+    incorrect_user: "bài đăng không hợp lệ"
+    micropost:
+      turbo_confirm: "Bạn có chắc chắn không?"
+      post_time: "Đăng %{time} trước."
+      delete: "| xóa"

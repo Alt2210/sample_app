@@ -26,4 +26,12 @@ class ApplicationController < ActionController::Base
     store_location
     redirect_to login_url
   end
+
+  def create_feed_item
+    return unless logged_in?
+
+    @pagy, @feed_items =
+      pagy(current_user.feed,
+           limit: Settings.pagination.microposts_per_page_10)
+  end
 end

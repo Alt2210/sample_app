@@ -5,13 +5,14 @@ export default class extends Controller {
 
   connect() {
     this.close = this.close.bind(this)
-    document.addEventListener("click", this.close)
+    this.handleOtherOpened = this.handleOtherOpened.bind(this)
     document.addEventListener("click", this.close)
     window.addEventListener("dropdown:opened", this.handleOtherOpened)
   }
 
   disconnect() {
     document.removeEventListener("click", this.close)
+    window.removeEventListener("dropdown:opened", this.handleOtherOpened)
   }
 
   toggle(event) {

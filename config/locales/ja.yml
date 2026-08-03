@@ -9,6 +9,7 @@ ja:
       tutorial_link: "Ruby on Rails Tutorial"
       sample_app: "のサンプルアプリケーションです。"
       signup: "今すぐ登録!"
+      feed: "マイクロポストフィード"
     help:
       title: "ヘルプ"
       heading: "ヘルプ"
@@ -40,6 +41,8 @@ ja:
       title: "更新"
       heading: "プロフィールの更新"
       change: "変更"
+    show:
+      micropost: "マイクロポスト (%{count})"
   layouts:
     application:
       base_title: "Ruby on Rails Tutorial サンプルアプリケーション"
@@ -75,12 +78,16 @@ ja:
   activerecord:
     models:
       user: "ユーザー"
+      micropost: "マイクロポスト"
     attributes:
       user:
         name: "名前"
         email: "メールアドレス"
         password: "パスワード"
         password_confirmation: "パスワードの確認"
+      micropost:
+        content: "コンテンツ"
+        image: "画像"
     button:
       submit: "アカウントを作成する"
       update: "情報を更新する"
@@ -109,6 +116,13 @@ ja:
               too_long: "が長すぎます (最大 %{count} 文字)"
             password:
               too_short: "が短すぎます (最小 %{count} 文字)"
+        micropost:
+          attributes:
+            content:
+              too_long: "が長すぎます (最大 %{count} 文字)"
+            image:
+              invalid_image_format: "は有効な画像フォーマットである必要があります"
+              image_too_large: "は5MB未満である必要があります"
       messages:
         blank: "を入力してください"
         taken: "は既に使用されています"
@@ -119,6 +133,13 @@ ja:
       header:
         one: "フォームに1つのエラーがあります。"
         other: "フォームに%{count}つのエラーがあります。"
+    micropost_form:
+      placeholder: "新しいマイクロポストを作成..."
+      submit: "投稿"
+      image_size_alert: "最大ファイルサイズは5MBです。より小さなファイルを選択してください。"
+    user_info:
+      view: "プロフィールを見る"
+      micropost_count: "%{count} マイクロポスト"
   sessions:
     new:
       title: "ログイン"
@@ -161,3 +182,12 @@ ja:
       link: "パスワードを再設定する"
       expiration: "このリンクの有効期限は2時間です。"
       note: "パスワードの再設定をリクエストしていない場合は、このメールを無視してください。パスワードはそのまま保持されます。"
+  microposts:
+    create_success: "マイクロポストが作成されました！"
+    delete_success: "マイクロポストを削除しました"
+    delete_fail: "削除に失敗しました"
+    incorrect_user: "無効なマイクロポスト"
+    micropost:
+      turbo_confirm: "本当によろしいですか？"
+      post_time: "%{time}前に投稿。"
+      delete: "| 削除"

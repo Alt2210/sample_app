@@ -4,10 +4,13 @@ class UsersController < ApplicationController
   before_action :correct_user, only: %i(edit update)
   before_action :admin_user, only: :destroy
 
-  def show; end
+  def show
+    @pagy, @microposts = pagy(@user.microposts.newest,
+                              limit: Settings.pagination.microposts_per_page_10)
+  end
 
   def index
-    @pagy, @users = pagy(:offset, User.newest,
+    @pagy, @users = pagy(User.newest,
                          limit: Settings.pagination.user_per_page)
   end
 
