@@ -18,4 +18,8 @@ module UsersHelper
   def count_microposts
     @user.microposts.count
   end
+
+  def current_relationship_for user
+    current_user.active_relationships.find_by(followed_id: user.id)
+  end
 end

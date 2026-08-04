@@ -16,6 +16,7 @@ user:
 gravatar:
   size_for_index: 50
   size_for_show: 80
+  size_for_sidebar: 30
 pagination:
   user_per_page: 10
   microposts_per_page_10: 10

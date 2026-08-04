@@ -49,6 +49,20 @@ class UsersController < ApplicationController
     redirect_to users_path
   end
 
+  def following
+    @title = t("users.show_follow.following")
+    @pagy, @users = pagy(@user.following.newest,
+                         limit: Settings.pagination.user_per_page)
+    render :show_follow
+  end
+
+  def followers
+    @title = t("users.show_follow.followers")
+    @pagy, @users = pagy(@user.followers.newest,
+                         limit: Settings.pagination.user_per_page)
+    render :show_follow
+  end
+
   private
   def user_params
     params.require(:user).permit :name, :email,

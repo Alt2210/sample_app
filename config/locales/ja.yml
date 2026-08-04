@@ -43,6 +43,15 @@ ja:
       change: "変更"
     show:
       micropost: "マイクロポスト (%{count})"
+    follow:
+      follow: "フォロー"
+    unfollow:
+      unfollow: "フォロー解除"
+    show_follow:
+      title: "フォロー"
+      heading: "フォロー"
+      following: "フォロー中"
+      followers: "フォロワー"
   layouts:
     application:
       base_title: "Ruby on Rails Tutorial サンプルアプリケーション"
@@ -99,6 +108,7 @@ ja:
         activate: "アカウントが有効化されました！"
       warnings:
         not_found_user: "ユーザーが見つかりません！"
+        not_found_relationship: "関係が見つかりません！"
       danger:
         delete_fail: "削除に失敗しました！"
         login_required: "ログインしてください！"

@@ -42,7 +42,16 @@ en:
       heading: "Update my profile"
       change: "Change"
     show:
-      micropost: "Microposts (%{count})"
+      micropost: "Microposts: (%{count})"
+    follow:
+      follow: "Follow"
+    unfollow:
+      unfollow: "Unfollow"
+    show_follow:
+      title: "Follow"
+      heading: "Follow"
+      following: "Following"
+      followers: "Followers"
   layouts:
     application:
       base_title: "Sample App"
@@ -99,6 +108,7 @@ en:
         activate: "Account activated!"
       warnings:
         not_found_user: "User not found!"
+        not_found_relationship: "Relationship not found!"
       danger:
         delete_fail: "Delete fail!"
         login_required: "Please Login!"
